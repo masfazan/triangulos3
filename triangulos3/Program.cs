@@ -11,22 +11,17 @@ lado2 = float.Parse(Console.ReadLine());
 Console.Write("Digite o lado 3: ");
 lado3 = float.Parse(Console.ReadLine());
 
-if (lado1 + lado2 > lado3 && lado2 + lado3 > lado1 && lado1 + lado3 > lado2)
+switch (lado1 + lado2 > lado3 && lado2 + lado3 > lado1 && lado1 + lado3 > lado2)
 {
-    if (lado1 == lado2 && lado2 == lado3)
-    {
-        Console.WriteLine("O triângulo é equilátero");
-    }
-    else if (lado1 == lado2 || lado2 == lado3 || lado3 == lado1)
-    {
-        Console.WriteLine("O triângulo é isósceles");
-    }
-    else
-    {
+    case (lado1 == lado2 && lado2 == lado3):
+     Console.WriteLine("O triângulo é equilátero");
+        break;
+    case (lado1 == lado2 || lado2 == lado3 || lado3 == lado1):
+    Console.WriteLine("O triângulo é isósceles");
+        break;
+    default:
         Console.WriteLine("O triângulo é escaleno");
-    }
+        break;
 }
-else
-{
-    Console.WriteLine("As medidas não são válidas.");
-}
+        Console.WriteLine("As medidas não são válidas.");
+//LOCALIZAR ERRO
